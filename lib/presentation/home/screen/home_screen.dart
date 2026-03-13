@@ -4,6 +4,8 @@ import 'package:youtubelite/core/app_strings.dart';
 import 'package:youtubelite/core/youtube_urls.dart';
 import 'package:youtubelite/presentation/home/widget/youtube_nav_tile.dart';
 
+import '../../youtube/screen/youtube_screen.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -13,7 +15,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   void _openUrl(String title, String url) {
-    // Navigator.push(context, MaterialPageRoute(builder: (context)=>YoutubeNavTile(icon: icon, label: label, onTap: onTap)))
+     Navigator.push(context, MaterialPageRoute(builder: (context)=> YoutubeScreen(title: title, url: url)));
   }
 
   @override
